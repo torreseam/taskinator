@@ -72,7 +72,6 @@ var createTaskEl = function (taskDataObj) {
 
     // add task id as a custom attribute
     listItemEl.setAttribute("data-task-id", taskIdCounter);
-    //dynamically draggable attribute
     listItemEl.setAttribute("draggable", "true");
 
     //create div to hold task info and add to list item
@@ -200,13 +199,14 @@ var taskStatusChangeHandler = function (event) {
     else if (statusValue === "completed") {
         tasksCompletedEl.appendChild(taskSelected);
     }
-//Dragstart Handler 
-    var dragTaskHandler = function (event) {
-        var taskId = event.target.getAttribute("data-task-id");
-        console.log("Task ID:", taskId);
-        console.log("event", event);
-    }
 };
+// //Dragstart Handler 
+//     var dragTaskHandler = function (event) {
+//         var taskId = event.target.getAttribute("data-task-id");
+//         console.log("Task ID:", taskId);
+//         console.log("event", event);
+//     }
+// };
 
 
 pageContentEl.addEventListener("click", taskButtonHandler);
